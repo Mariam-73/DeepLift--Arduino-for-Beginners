@@ -1,0 +1,16 @@
+// Pin connected to buzzer
+int buzzer = 5;
+
+void setup() 
+{
+
+    // Defines the Buzzer pin as output 
+    pinMode(buzzer,OUTPUT);    
+}
+
+void loop() 
+{
+for(int i = 0; i<= 1023; i++)
+    tone(buzzer,i*4,1000);   //Output buzzer for read frquency input fo 1 second 
+
+}
