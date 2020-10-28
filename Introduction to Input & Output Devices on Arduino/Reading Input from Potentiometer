@@ -1,0 +1,14 @@
+int in_p = A0; //Declare analouge pin
+
+void setup() { 
+    pinMode(in_p, INPUT);  //Declare pin mode as Input
+    Serial.begin(9600);
+}
+
+void loop() {
+
+  int val = analogRead(in_p); //Read Analouge value
+  Serial.print(val); //Display Analouge Value
+  Serial.print('\t');
+
+}
