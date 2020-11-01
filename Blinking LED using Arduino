@@ -1,4 +1,4 @@
-int my_led = 5; //Define my LED pin
+int my_led = 7 ; //Define my LED pin
 
 // the setup function runs once
 void setup() {
