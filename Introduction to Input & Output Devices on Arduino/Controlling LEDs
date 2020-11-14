@@ -1,6 +1,7 @@
+  
 int LED1 =  3; //Declare 1st LED
 int LED8 = 10; //Declare last LED
-
+int lastLed = 0;
 
 void setup() {
   Serial.begin(9600);
@@ -9,13 +10,18 @@ void setup() {
 }
 
 void loop() {
-  
-  int lastLed = Serial.read();
+  if (Serial.available() > 0)
+    lastLed = Serial.parseInt();
+  Serial.println(lastLed);
 
-  for(int i = LED1; i <= lastLed; i+=1)//Turn on Input number of LEDs
+  for(int i = LED1; i < (LED1 + lastLed); i++)//Turn on Input number of LEDs
   {
     digitalWrite(i, HIGH);
     delay(2);
+  }
+  delay(1000);
+  for(int i = LED1; i < (LED1 + lastLed); i+=1)//Turn on Input number of LEDs
+  {
     digitalWrite(i, LOW);
   }
 
