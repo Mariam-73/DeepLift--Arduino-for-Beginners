@@ -6,10 +6,10 @@
 //Enable Pin of the Right Motor (must be PWM)
 #define LM1 2       // left motor
 #define LM2 3       // left motor
-#define ENA 10
+#define ENA 9
 #define RM1 4       // right motor
 #define RM2 5       // right motor
-#define ENB 9
+#define ENB 10
 
 //Sensors Pins
 int Out1 = A0;
